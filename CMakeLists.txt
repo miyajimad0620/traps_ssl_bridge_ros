@@ -72,7 +72,7 @@ if(${PROJECT_NAME}_lib_files_count GREATER 0)
 endif()
 
 # ノードプラグインの設定
-set(node_plugins)
+set(node_plugins vision_bridge)
 foreach(node_plugin IN LISTS node_plugins)
   rclcpp_components_register_node("${PROJECT_NAME}_lib"
     PLUGIN "${PROJECT_NAME}::${node_plugin}::Node"
