@@ -20,11 +20,14 @@
 #include <unordered_map>
 #include <vector>
 
+#include "./ssl_vision_geometry.pb.h"
 #include "asio/io_service.hpp"
 #include "asio/ip/address.hpp"
 #include "asio/ip/udp.hpp"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
+#include "nav_msgs/msg/occupancy_grid.hpp"
 #include "rclcpp/node.hpp"
+#include "traps_ssl_bridge_ros/static_qos.hpp"
 #include "traps_ssl_bridge_ros/visibility.hpp"
 #include "traps_ssl_bridge_ros/vision_bridge/robot_sub_node.hpp"
 
@@ -55,14 +58,23 @@ public:
   }
 
 private:
+  using MapMsg = nav_msgs::msg::OccupancyGrid;
+
   void receive();
 
   std::vector<std::optional<RobotSubNode>> blue_robot_sub_nodes_, yellow_robot_sub_nodes_;
+  rclcpp::Publisher<MapMsg>::SharedPtr map_publisher_;
   rclcpp::TimerBase::SharedPtr receive_timer_;
 
   asio::io_service io_service_;
   asio::error_code ec_;
   asio::ip::udp::socket udp_socket_;
+
+  MapMsg map_msg_;
+  double map_resolution_inv_;
+  std::size_t wall_thickness_, goal_width_, goal_height_harf_;
+
+  MapMsg::_info_type map_info_last_;
 };
 
 }  // namespace traps_ssl_bridge_ros::vision_bridge

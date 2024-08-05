@@ -21,9 +21,9 @@
 #include <unordered_map>
 #include <vector>
 
+#include "./ssl_vision_detection.pb.h"
 #include "geometry_msgs/msg/pose_with_covariance_stamped.hpp"
 #include "rclcpp/node.hpp"
-#include "./ssl_vision_detection.pb.h"
 
 namespace traps_ssl_bridge_ros::vision_bridge
 {

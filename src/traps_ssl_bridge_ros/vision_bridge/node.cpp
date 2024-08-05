@@ -16,13 +16,14 @@
 
 #include <deque>
 
+#include "./ssl_vision_wrapper.pb.h"
 #include "asio/ip/multicast.hpp"
 #include "fmt/core.h"
 #include "fmt/ranges.h"
-#include "./ssl_vision_wrapper.pb.h"
 #include "traps_ssl_bridge_ros/create_robot_names.hpp"
 #include "traps_ssl_bridge_ros/create_robot_subnodes.hpp"
 #include "traps_ssl_bridge_ros/dynamic_qos.hpp"
+#include "traps_ssl_bridge_ros/fill_map.hpp"
 
 namespace traps_ssl_bridge_ros::vision_bridge
 {
@@ -41,12 +42,14 @@ Node::Node(
         "yellow_robots", create_robot_names(
           this->declare_parameter("yellow_robots.prefix", "yellow"),
           this->declare_parameter("yellow_robots.count", 11))))),
+  map_publisher_(this->create_publisher<MapMsg>("map", static_qos())),
   receive_timer_(this->create_wall_timer(std::chrono::seconds(0), [this] {this->receive();})),
   io_service_(),
   udp_socket_(
     io_service_,
     asio::ip::udp::endpoint(asio::ip::udp::v4(), this->declare_parameter("udp.port", 10020)))
 {
+  // マルチキャストグループへの参加
   asio::error_code ec;
   const auto multicast_address = asio::ip::address::from_string(
     this->declare_parameter("udp.multicast_address", "224.5.23.2"), ec);
@@ -64,6 +67,16 @@ Node::Node(
     const auto error_str = fmt::format("asio error: {}", ec.value());
     RCLCPP_ERROR(this->get_logger(), error_str.c_str());
   }
+
+  // map_msgと関連変数の初期化
+  map_msg_.header.frame_id = this->has_parameter("frame_id") ?
+    this->get_parameter("frame_id").as_string() :
+    this->declare_parameter("frame_id", "map");
+  map_msg_.info.resolution = this->declare_parameter("map.resolution", 0.005);
+  map_resolution_inv_ = 1.0 / map_msg_.info.resolution;
+  wall_thickness_ = 0.02 * map_resolution_inv_;
+  goal_width_ = 0.18 * map_resolution_inv_;
+  goal_height_harf_ = 1.8 / 2 * map_resolution_inv_;
 }
 
 void Node::receive()
@@ -118,6 +131,62 @@ void Node::receive()
       };
     publish_robots(yellow_robot_sub_nodes_, detection.robots_yellow());
     publish_robots(blue_robot_sub_nodes_, detection.robots_blue());
+  }
+
+  // geometryのpublish
+  if (packet.has_geometry() && packet.geometry().has_field()) {
+    const auto field = packet.geometry().field();
+
+    // map_msg.infoの設定
+    const auto field_offset =
+      wall_thickness_ +
+      static_cast<std::size_t>(1e-3 * field.boundary_width() * map_resolution_inv_);
+    const auto with_harf =
+      field_offset +
+      static_cast<std::size_t>((1e-3 / 2) * field.field_length() * map_resolution_inv_);
+    const auto height_harf =
+      field_offset +
+      static_cast<std::size_t>((1e-3 / 2) * field.field_width() * map_resolution_inv_);
+    map_msg_.info.width = 2 * with_harf;
+    map_msg_.info.height = 2 * height_harf;
+    map_msg_.info.origin.position.x = (1e-3 / -2) * field.field_length();
+    map_msg_.info.origin.position.y = (1e-3 / -2) * field.field_width();
+
+    // 前回publishしたものと同じならpublishしない
+    if (map_msg_.info != map_info_last_) {
+      map_msg_.header.stamp = map_msg_.info.map_load_time = now;
+      map_msg_.data = decltype(map_msg_.data)(map_msg_.info.height * map_msg_.info.width);
+
+      // フィールドの壁を塗りつぶす
+      map_msg_.data = fill_map(
+        {{0, 0}, {map_msg_.info.width, wall_thickness_}}, map_msg_.info.width,
+        std::move(map_msg_.data));
+      map_msg_.data = fill_map(
+        {{0, map_msg_.info.height - wall_thickness_}, {map_msg_.info.width, map_msg_.info.height}},
+        map_msg_.info.width, std::move(map_msg_.data));
+      map_msg_.data = fill_map_mirror(
+        {{0, 0}, {wall_thickness_, map_msg_.info.height}}, map_msg_.info.width,
+        std::move(map_msg_.data));
+
+      // ゴールを塗りつぶす
+      map_msg_.data = fill_map_mirror(
+        {{field_offset - goal_width_ - wall_thickness_, height_harf + goal_height_harf_},
+          {field_offset, height_harf + goal_height_harf_ + wall_thickness_}},
+        map_msg_.info.width, std::move(map_msg_.data));
+      map_msg_.data = fill_map_mirror(
+        {{field_offset - goal_width_ - wall_thickness_,
+          height_harf - goal_height_harf_ - wall_thickness_},
+          {field_offset, height_harf - goal_height_harf_}},
+        map_msg_.info.width, std::move(map_msg_.data));
+      map_msg_.data = fill_map_mirror(
+        {{field_offset - goal_width_ - wall_thickness_, height_harf - goal_height_harf_},
+          {field_offset - goal_width_, height_harf + goal_height_harf_}},
+        map_msg_.info.width, std::move(map_msg_.data));
+      map_publisher_->publish(map_msg_);
+
+      // publishした内容を記録
+      map_info_last_ = map_msg_.info;
+    }
   }
 }
 

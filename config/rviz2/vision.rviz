@@ -6,6 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Map1
+        - /Map1/Topic1
       Splitter Ratio: 0.5
     Tree Height: 549
   - Class: rviz_common/Selection
@@ -68,11 +70,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -103,11 +105,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -138,11 +140,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -173,11 +175,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -208,11 +210,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -243,11 +245,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -278,11 +280,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -313,11 +315,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -348,11 +350,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -383,11 +385,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -418,11 +420,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -453,11 +455,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -488,11 +490,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -523,11 +525,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -558,11 +560,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -593,11 +595,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -628,11 +630,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -663,11 +665,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -698,11 +700,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -733,11 +735,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -768,11 +770,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -803,11 +805,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -838,11 +840,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -873,11 +875,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -908,11 +910,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -943,11 +945,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -978,11 +980,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -1013,11 +1015,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -1048,11 +1050,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -1083,11 +1085,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -1118,11 +1120,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -1153,11 +1155,11 @@ Visualization Manager:
           Value: true
         Value: false
       Enabled: true
-      Head Length: 0.2
-      Head Radius: 0.1
+      Head Length: 0.20000000298023224
+      Head Radius: 0.10000000149011612
       Name: PoseWithCovariance
-      Shaft Length: 0.1
-      Shaft Radius: 0.05
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic:
         Depth: 5
@@ -1166,6 +1168,27 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Best Effort
         Value: yellow15/vision/pose
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: map
+      Update Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: map_updates
+      Use Timestamp: false
       Value: true
   Enabled: true
   Global Options:
@@ -1213,7 +1236,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 5.765573024749756
+      Distance: 9.072240829467773
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
